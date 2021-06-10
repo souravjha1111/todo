@@ -8,11 +8,12 @@ from .models import Task
 @api_view(['GET'])
 def apiOverview(request):
     api_urls = {
-        'one': 'one',
-        'one2': 'one541',
-        'one3': 'one351',
-        'one4': 'one35',
-        'one5': 'one365',
+        '/api': 'list of things available',
+        'task-list': 'gives you all tasks list availabe database',
+        'task-create/': 'Post a tak through jaseon format just copy this and edit as per requirements => {"id": 5, "title": "hi", "completed": false  }',
+        'task-details/id': 'for specific task details',
+        'task-Update/id': 'update any id value',
+        'task-Delete/id': 'Delete any id value...click that red button too',
     }
     return Response(api_urls)
 
