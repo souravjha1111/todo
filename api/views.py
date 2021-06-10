@@ -9,11 +9,11 @@ from .models import Task
 def apiOverview(request):
     api_urls = {
         '/api': 'list of things available',
-        'task-list': 'gives you all tasks list availabe database',
-        'task-create/': 'Post a tak through jaseon format just copy this and edit as per requirements => {"id": 5, "title": "hi", "completed": false  }',
-        'task-details/id': 'for specific task details',
-        'task-Update/id': 'update any id value',
-        'task-Delete/id': 'Delete any id value...click that red button too',
+        '/api/task-list': 'gives you all tasks list availabe database',
+        '/api/task-create/': 'Post a tak through jaseon format just copy this and edit as per requirements => {"id": 5, "title": "hi", "completed": false  }',
+        '/api/task-details/id': 'for specific task details',
+        '/api/task-Update/id': 'update any id value',
+        '/api/task-Delete/id': 'Delete any id value...click that red button too',
     }
     return Response(api_urls)
 
